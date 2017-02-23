@@ -12,7 +12,7 @@ var db *sql.DB; var bot *telebot.Bot
 func main() {
 	//get connection to telegram and sqlite3 
     bot_, err := telebot.NewBot("325327338:AAGBoD62nd6y1T3ZBcZcZXEcJPkN2uftQB4"); checkErr(err)
-    db_, err := sql.Open("sqlite3", "./foo.db"); checkErr(err); db = db_; bot = bot_ 
+    db_, err := sql.Open("sqlite3", "./db/database.db"); checkErr(err); db = db_; bot = bot_ 
 
     //create message channel
     messages := make(chan telebot.Message, 100) 
